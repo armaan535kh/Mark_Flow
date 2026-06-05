@@ -1,14 +1,21 @@
 def is_heading(line):
+    line = line.strip()
+
     return (
-        line.strip() != ""
+        line != ""
+        and any(char.isalpha() for char in line)
         and line == line.upper()
-        and len(line) < 15
+        and len(line) < 50
     )
 
 def is_bullet(line):
     line = line.strip()
+
     return (
-        line.startswith("- ") or line.startswith("* ") or line.startswith("+ ")
+        line.startswith("- ")
+        or line.startswith("* ")
+        or line.startswith("+ ")
+        or line.startswith("• ")
     )
 
 def convert_to_markdown(text):
