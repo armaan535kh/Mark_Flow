@@ -25,14 +25,21 @@ formData.append("file", file);
 setLoading(true);
 
 try {
+  console.log("Uploading to:", "https://mark-flow-2.onrender.com/upload");
+
   const response = await axios.post(
     "https://mark-flow-2.onrender.com/upload",
     formData
   );
 
+  console.log(response.data);
   setResult(response.data);
+
 } catch (error) {
-  console.error(error);
+  console.log("STATUS:", error.response?.status);
+  console.log("DATA:", error.response?.data);
+  console.log("URL:", error.config?.url);
+
   alert("Upload failed");
 }
 
