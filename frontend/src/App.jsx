@@ -26,7 +26,7 @@ setLoading(true);
 
 try {
   const response = await axios.post(
-    "https://mark-flow-2.onrender.com",
+    "https://mark-flow-2.onrender.com/upload",
     formData
   );
 
