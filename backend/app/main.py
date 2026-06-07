@@ -15,8 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173",
-                   "https://mark-flow-2.onrender.com"],
+    allow_origins=[ "https://mark-flow-2.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
