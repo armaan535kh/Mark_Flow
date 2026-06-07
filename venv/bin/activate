@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/armaankhan/Documents/MarkFlow/venv"
+VIRTUAL_ENV="/Users/armaankhan/Documents/MarkFlow/Mark_Flow/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
